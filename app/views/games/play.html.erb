@@ -1,0 +1,14 @@
+<h1>Games#play</h1>
+<p>Find me in app/views/games/play.html.erb</p>
+
+<div>
+  <%= @grid %>
+  <form action="score" method="post">
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    <input type="text" name="word" placeholder="Give me a word">
+
+    <input type="hidden" name="start_time" value="<%= @start_time %>">
+    <input type="hidden" name="grid" value="<%= @grid %>">
+    <input type="submit" name="Submit">
+  </form>
+</div>
